@@ -1,0 +1,342 @@
+/* Universal styling */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    color: #555;
+}
+nav,ul{
+    list-style: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+hr{
+    width: 150px;
+    height: 2px;
+    background-color: rgb(163, 3, 30);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 35px;
+}
+/* Universal styling */
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 100px;
+}
+section h3.title{
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+section p{
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0px 20px;
+    line-height: 2;
+}
+
+@media(max-width:1000px){
+    section{
+        padding: 100px 50px;
+    }
+}
+
+@media(max-width:600px){
+    section{
+        padding: 80px 30px;
+    }
+}
+
+/* header section style */
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 35px 100px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header nav{
+    display: flex;
+}
+
+.header nav li{
+    margin: 0px 15px;
+}
+
+.header nav li{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header nav li:first-child{
+    margin-left: 0px;
+}
+
+/* .header nav li:last-child{
+    margin-right: 0px;
+} */
+
+@media (max-width:1000px){
+    .header{
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:700px){
+    /* agr iss max width se niche gya toh column mai adjust kr lega for responsive */
+    .header{
+        flex-direction: column;
+    }
+    .header{
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+}
+
+/* header section style */
+
+
+/* hero section style */
+.hero-section{
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+
+}
+
+.hero-section .bg-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.hero-section h1{
+    margin-bottom: 15px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: black;
+}
+
+.hero-section .browse-all-places-button{
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(117, 55, 32);
+    font-weight: 800;
+    text-align: center;
+    padding: 20px 45px;
+    border: 2px solid black;
+    font-size: 30px;
+    transition: color 2s ease-in,background-color 2s ease-out;
+}
+
+.hero-section .browse-all-places-button:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+
+}
+
+@media (max-width:800px){
+    .hero-section{
+        min-height: 600px;
+    }
+    .hero-section h1{
+        font-size: 45px;
+    }
+    .hero-section .browse-all-places-button{
+        padding: 15px 40px;
+    }
+}
+@media (max-width:450px){
+    .hero-section h1{
+        font-size: 30px;
+    }
+    .hero-section .browse-all-places-button{
+        padding: 12px 30px;
+        font-size: 20px;
+    }
+}
+
+
+/* hero section style */
+
+
+/* our popular places section style */
+.our-popular-places .popular-places-grid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.our-popular-places .popular-places-grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(46, 38, 38, 0.233);
+    background-clip: content-box;
+}
+
+.our-popular-places .popular-places-grid li.special-img-class-small{
+    flex-basis: 40%;
+}
+
+.our-popular-places .popular-places-grid li.special-img-class-large{
+    flex-basis: 60%;
+}
+
+@media (max-width:1000px) {
+    .our-popular-places .popular-places-grid li.special-img-class-large,
+    .our-popular-places .popular-places-grid li.special-img-class-small{
+
+        flex-basis:100%;
+    }
+}
+
+/* our popular places section style */
+
+/* our destination */
+.our-destination .our-destination-grid{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.our-destination .our-destination-grid li{
+    padding: 0px 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.our-destination .our-destination-grid li i{
+    font-size: 50px;
+    color: brown;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.our-destination .our-destination-grid li h4{
+    color: rgb(128, 128, 128);
+    font-size: 20px;
+    margin-bottom: 25px;
+
+}
+
+.our-destination .our-destination-grid li p{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width:1000px){
+    .our-destination .our-destination-grid li{
+        flex-basis:70%;
+        margin-bottom:60px;
+    }
+    .our-destination .our-destination-grid li:last-child{
+        flex-basis:70%;
+        margin-bottom:0px;
+    }
+}
+
+
+@media (max-width:600px) {
+    .our-destination .our-destination-grid li{
+        flex-basis: 100%;
+
+    }
+    
+}
+
+
+/* subscription start */
+.subscription{
+    background-color: rgb(218, 214, 213);
+
+}
+
+.subscription form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 80%;
+}
+
+.subscription form input{
+    flex: 15px;
+    flex:1;
+    margin-right: 25px;
+    font-size: 18px;
+    color:#555555;
+
+}
+
+.subscription form .subscription-btn{
+    color: white;
+    /* margin-top: 20px; */
+    border-radius: 4px;
+    background-color: rgb(117, 55, 32);
+    font-weight: 800;
+    text-align: center;
+    padding: 10px 42px;
+    border: 2px solid black;
+    font-size: 30px;
+    transition: color 2s ease-in,background-color 2s ease-out;
+}
+
+.subscription form .subscription-btn:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+
+}
+
+@media (max-width:800px){
+    .subscription form input{
+        flex-basis: 100%;
+        margin:0px 0px 20px 0px;
+    }
+
+}
